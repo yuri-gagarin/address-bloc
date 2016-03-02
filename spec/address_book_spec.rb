@@ -46,5 +46,17 @@ RSpec.describe AddressBook do
       expect(book_size).to eq 5
     end
 
+    # #4
+    it "imports the 1st entry" do
+      book.import_from_csv("entries.csv")
+      # Check the first entry
+      entry_one = book.entries[0]
+
+      # #5
+      expect(entry_one.name).to eq "Bill"
+      expect(entry_one.phone_number).to eq "555-555-4854"
+      expect(entry_one.email).to eq "bill@blocmail.com"
+    end
   end
+
 end
