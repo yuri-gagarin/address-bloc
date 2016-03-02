@@ -58,7 +58,42 @@ RSpec.describe AddressBook do
       expect(entry_one.phone_number).to eq "555-555-4854"
       expect(entry_one.email).to eq "bill@blocmail.com"
     end
-  end
 
+    it "imports the 2nd entry" do
+      book.import_from_csv("entries.csv")
+      # Check the second entry
+      entry_two = book.entries[1]
+      expect(entry_two.name).to eq "Bob"
+      expect(entry_two.phone_number).to eq "555-555-5415"
+      expect(entry_two.email).to eq "bob@blocmail.com"
+    end
+ 
+    it "imports the 3rd entry" do
+      book.import_from_csv("entries.csv")
+      # Check the third entry
+      entry_three = book.entries[2]
+      expect(entry_three.name).to eq "Joe"
+      expect(entry_three.phone_number).to eq "555-555-3660"
+      expect(entry_three.email).to eq "joe@blocmail.com"
+    end
+ 
+    it "imports the 4th entry" do
+      book.import_from_csv("entries.csv")
+      # Check the fourth entry
+      entry_four = book.entries[3]
+      expect(entry_four.name).to eq  "Sally"
+      expect(entry_four.phone_number).to eq "555-555-4646"
+      expect(entry_four.email).to eq "sally@blocmail.com"
+    end
+ 
+    it "imports the 5th entry" do
+      book.import_from_csv("entries.csv")
+      # Check the fifth entry
+      entry_five = book.entries[4]
+      expect(entry_five.name).to eq "Sussie"
+      expect(entry_five.phone_number).to eq "555-555-2036"
+      expect(entry_five.email).to eq "sussie@blocmail.com"
+    end
+  end
 end
 
