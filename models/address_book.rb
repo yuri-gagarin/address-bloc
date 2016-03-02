@@ -33,4 +33,8 @@ class AddressBook
       add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
     end
   end
+
+  # Search AddressBook for a specific entry by name
+  def binary_search(name)
+  end
 end
