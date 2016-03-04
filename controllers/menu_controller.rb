@@ -73,6 +73,19 @@ class MenuController
   end
 
   def search_entries
+    # #9
+    print "Search by name: "
+    name = gets.chomp
+    # #10
+    match = address_book.binary_search(name)
+    system "clear"
+    # #11
+    if match
+      puts match.to_s
+      search_submenu(match)
+    else
+      puts "No match found for #{name}"
+    end
   end
 
   def read_csv
