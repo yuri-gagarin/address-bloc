@@ -124,8 +124,13 @@ class MenuController
       when "n"
         # #19
       when "d"
+        # #7
+        delete_entry(entry)
       when "e"
         # #20
+        # #8
+        edit_entry(entry)
+        entry_submenu(entry)
       when "m"
         system "clear"
         main_menu
