@@ -77,4 +77,31 @@ class MenuController
 
   def read_csv
   end
+
+  def entry_submenu(entry)
+    # #16
+    puts "n - next entry"
+    puts "d - delete entry"
+    puts "e - edit this entry"
+    puts "m - return to main menu"
+
+    # #17
+    selection = gets.chomp
+
+    case selection
+    # #18
+      when "n"
+    # #19
+      when "d"
+      when "e"
+    # #20
+      when "m"
+        system "clear"
+        main_menu
+      else
+        system "clear"
+        puts "#{selection} is not a valid input"
+        entry_submenu(entry)
+    end
+  end
 end
