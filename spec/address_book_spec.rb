@@ -1,10 +1,8 @@
 require_relative '../models/address_book'
 
 RSpec.describe AddressBook do
-  # #1
   let(:book) { AddressBook.new }
 
-  # #2
   describe "attributes" do
     it "responds to entries" do
       expect(book).to respond_to(:entries)
@@ -39,7 +37,6 @@ RSpec.describe AddressBook do
   # Test that AddressBook's .import_from_csv() method is working as expected
   describe "#import_from_csv" do
     it "imports the correct number of entries" do
-      # #3
       book.import_from_csv("entries.csv")
       book_size = book.entries.size
 
