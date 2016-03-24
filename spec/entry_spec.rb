@@ -1,13 +1,9 @@
 require_relative '../models/entry'
 
-# #1
 RSpec.describe Entry do
-  # #2
   describe "attributes" do
-    # #3
     it "responds to name" do
       entry = Entry.new
-      # #4
       expect(entry).to respond_to(:name)
     end
 
