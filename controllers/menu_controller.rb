@@ -18,7 +18,6 @@ class MenuController
 
     selection = gets.to_i
 
-    # #7
     case selection
       when 1
         system "clear"
@@ -38,9 +37,7 @@ class MenuController
         main_menu
       when 5
         puts "Good-bye!"
-        # #8
         exit(0)
-      # #9
       else
         system "clear"
         puts "Sorry, that is not a valid input"
@@ -48,7 +45,6 @@ class MenuController
     end
   end
 
-  # #10
   def view_all_entries
   end
 
