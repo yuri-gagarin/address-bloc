@@ -1,4 +1,3 @@
-# #1
 require_relative '../models/address_book'
 
 class MenuController
@@ -9,7 +8,6 @@ class MenuController
   end
 
   def main_menu
-    # #2
     puts "Main Menu - #{address_book.entries.count} entries"
     puts "1 - View all entries"
     puts "2 - Create an entry"
@@ -18,7 +16,6 @@ class MenuController
     puts "5 - Exit"
     print "Enter your selection: "
 
-    # #3
     selection = gets.to_i
     puts "You picked #{selection}"
   end
