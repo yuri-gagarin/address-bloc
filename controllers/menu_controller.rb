@@ -46,11 +46,9 @@ class MenuController
   end
 
   def view_all_entries
-    # #14
     address_book.entries.each do |entry|
       system "clear"
       puts entry.to_s
-    # #15
       entry_submenu(entry)
     end
 
